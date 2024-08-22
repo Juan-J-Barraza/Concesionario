@@ -1,4 +1,4 @@
-@startuml
+@startuml "ejercicio29"
 
 class Concessionaire {
     - String brand;
