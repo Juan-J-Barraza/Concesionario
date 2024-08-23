@@ -1,0 +1,99 @@
+@startuml "ejercicio29"
+
+class Concessionaire {
+    - String brand;
+    - List<Service> listServices;
+
+}
+
+class TypeConcessionaire {
+    - Concessionaire concesionarie;
+    - Car car;
+}
+
+class Car {
+    - Float price;
+    - Float discount;
+    - String technicalData;
+    - String power;
+    - String brand;
+    - String models;
+    - String Feactures;
+    - List<Equipment> listEquipmets;
+    - List<ExtraEquipment> listAvailableExtras;
+}
+
+class Equipment {
+    - String name;
+    - String type;
+    - String features;
+}
+
+class ExtraEquipment {
+    - String name;
+    - String price;
+}
+
+class Inventory {
+    - String IDbastidor;
+    - String location;
+}
+
+class Client {
+    - String name;
+    - String lastName;
+    - String typeDocument;
+    - String numberDocument;
+}
+
+class Seller {
+    - String name;
+    - String lastName;
+    - String NIF;
+    - String address;
+
+}
+
+class Document {
+    - String payMethod;
+    - Date date;
+    - Sale sale;
+    - Client client;
+    -List<ExtraEquipment> listExtraEquipments;
+}
+
+
+class Service {
+    - String name;
+    - String address;
+    - String NIF;
+}
+
+class Sale {
+    - String registration;
+    - String originCar;
+    - Document document;
+}
+
+
+Concessionaire "*" -- "*" Car: Have
+(Concessionaire, Car) .. TypeConcessionaire
+Car "1"  -- "*" Equipment: Have
+Car "1" -- "*" ExtraEquipment: could Have
+Concessionaire "1" -- "1" Inventory: Manages
+Concessionaire "1" -- "*" Service: Serves
+Concessionaire "1" -- "*" Seller: Work
+Document "1" -- "1" Sale: Contain
+Client "1" -- "1" Document: Contain
+Seller "1" -- "*" Client: Serves
+Seller "1" -- "*" Sale: Can
+Document "1" -- "1" Seller: Contain
+Car "1" -- "1" Document: Contain
+Document "1" -- "*" ExtraEquipment: Contain
+
+
+
+
+
+
+@enduml
