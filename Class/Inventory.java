@@ -18,6 +18,15 @@ public class Inventory {
         this.listCars = new ArrayList<>();
     }
 
+    @Override
+    public String toString() {
+        return "Inventory{" +
+                "listCars=" + listCars +
+                ", location=" + location +
+                ", locationServices=" + locationServices +
+                '}';
+    }
+
     public Concessionaire getLocation() {
         return location;
     }

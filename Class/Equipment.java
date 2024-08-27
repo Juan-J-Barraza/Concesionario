@@ -15,6 +15,15 @@ public class Equipment {
       this.features = features;
    }
 
+   @Override
+   public String toString() {
+       return "Equipment{" +
+               "name='" + name + '\'' +
+               ", type='" + type + '\'' +
+               ", features='" + features + '\'' +
+               '}';
+   }
+
    public String getName() {
       return name;
    }

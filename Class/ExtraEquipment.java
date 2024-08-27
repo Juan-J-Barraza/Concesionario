@@ -13,6 +13,14 @@ public class ExtraEquipment {
         this.price = price;
     }
 
+    @Override
+    public String toString() {
+        return "ExtraEquipment{" +
+                "name='" + name + '\'' +
+                ", price='" + price + '\'' +
+                '}';
+    }
+
     public String getName() {
         return name;
     }

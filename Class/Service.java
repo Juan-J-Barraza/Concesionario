@@ -15,6 +15,13 @@ public class Service {
         this.NIF = NIF;
     }
 
+    @Override
+    public String toString() {
+        return "Service{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+
     public String getName() {
         return name;
     }

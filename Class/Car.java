@@ -31,6 +31,7 @@ public class Car {
         this.status = status;
         this.feactures = feactures;
         this.listEquipmets = new ArrayList<>();
+        this.listAvailableExtras = new ArrayList<>();
     }
 
     public Car(String frameNumber, Float price, Float discount, String technicalData, String power, String brand,
@@ -45,7 +46,20 @@ public class Car {
         this.status = status;
         this.feactures = feactures;
         this.listEquipmets = new ArrayList<>();
-        this.listAvailableExtras = new ArrayList<>();
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "model='" + models + '\'' +
+                ", price=" + price +
+                ", brand='" + brand + '\'' +
+                ", status='" + status + '\'' +
+                ", power='" + power + '\'' +
+                ", feactures='" + feactures + '\'' +
+                ", listEquipmets='" + listEquipmets + '\'' +
+                ", listAvailableExtras='" + listAvailableExtras + '\'' +
+                '}';
     }
 
     public String getFrameNumber() {
@@ -136,6 +150,4 @@ public class Car {
         this.listAvailableExtras = listAvailableExtras;
     }
 
-
-    
 }
