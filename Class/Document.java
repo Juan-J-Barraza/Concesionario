@@ -25,6 +25,19 @@ public class Document {
         this.listExtraEquipments = new ArrayList<>();
     }
 
+    @Override
+    public String toString() {
+        return "Document{" +
+                "payMeethod='" + payMethod + '\'' +
+                ", date='" + date + '\'' +
+                ", client='" + client + '\'' +
+                ", car='" + car + '\'' +
+                ", seller='" + seller + '\'' +
+                ", listExtraEquipment='" + listExtraEquipments + '\'' +
+                '}';
+    }
+
+
 
     public String getPayMethod() {
         return payMethod;

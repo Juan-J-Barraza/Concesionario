@@ -15,6 +15,15 @@ public class Sale {
         this.document = document;
     }
 
+    @Override
+    public String toString() {
+        return "Sale{" +
+                "Registration='" + registration + '\'' +
+                ", originCar='" + originCar + '\'' +
+                ", document='" + document + '\'' +
+                '}';
+    }
+
     public String getRegistration() {
         return registration;
     }

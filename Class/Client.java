@@ -17,6 +17,15 @@ public class Client {
         this.numberDocument = numberDocument;
     }
 
+    @Override
+    public String toString() {
+        return "Client{" +
+                "name='" + name + '\'' +
+                ", LastName='" + lastName + '\'' +
+                ", numberDocument='" + numberDocument + '\'' +
+                '}';
+    }
+
     public String getName() {
         return name;
     }

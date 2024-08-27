@@ -54,24 +54,24 @@ public class Main {
 
         // objects Sale
         Sale sale = new Sale("REG001", "concessionaire", document);
+        seller.getListSales().add(sale);
 
 
         // objects TypeConcessionaire
         TypeConcessionaire typeConcessionaire = new TypeConcessionaire("Toyota", concessionaire, car);
 
-        System.out.println("Concessionaire: " + typeConcessionaire.getConcesionarie().getName());
-        System.out.println("Car Model: " + typeConcessionaire.getCar().getModels());
-        System.out.println("Sale Registration: " + sale.getRegistration());
-        System.out.println("Client Name: " + document.getClient().getName());
-        System.out.println("Extra Equipment: " + document.getListExtraEquipments().get(0).getName() + document.getListExtraEquipments().get(1));
-        System.out.println("Available Extras List: " + car.getListAvailableExtras());
-        System.out.println("Extra Equipment: " + document.getListExtraEquipments().get(0).getName());
+       System.out.println("Concessionaire: " + typeConcessionaire.getConcesionarie().getName());
+        //System.out.println("Car Model: " + typeConcessionaire.getCar().getModels());
+        //System.out.println("Sale Registration: " + sale.getRegistration());
+        //System.out.println("Client Name: " + document.getClient().getName());
+        //System.out.println("Extra Equipment: " + document.getListExtraEquipments().get(0).getName() + document.getListExtraEquipments().get(1));
+        //System.out.println("Available Extras List: " + car.getListAvailableExtras());
+        //System.out.println("Extra Equipment: " + document.getListExtraEquipments().get(0).getName());
+        System.out.println("list of vents seller: " + seller.getListSales());
         System.out.println("Servicios Disponibles en el Concessionaire:");
-
-
-        System.out.println("this is a inventory of cars: " + inventory.getListCars());
-        System.out.println("his location of inventory: " + inventory.getLocation().getName());
-        System.out.println("his location inventory of service: " + inventory.getLocationServices());
+        //System.out.println("this is a inventory of cars: " + inventory.getListCars());
+       // System.out.println("his location of inventory: " + inventory.getLocation().getName());
+        //System.out.println("his location inventory of service: " + inventory.getLocationServices());
     }
 
 }
