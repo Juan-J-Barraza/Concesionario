@@ -20,7 +20,6 @@ public class Sale {
         return "Sale{" +
                 "Registration='" + registration + '\'' +
                 ", originCar='" + originCar + '\'' +
-                ", document=" + document + '\'' +
                 '}';
     }
 

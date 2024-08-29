@@ -22,6 +22,14 @@ public class Concessionaire {
         this.listCars = new ArrayList<>();
     }
 
+    @Override
+    public String toString() {
+        return "Concessionaire{" +
+                "name='" + name + '\'' +
+                ", NIT='" + NIT + '\'' +
+                '}';
+    }
+
     
 
     public String getName() {

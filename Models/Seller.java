@@ -11,6 +11,7 @@ public class Seller {
     private Concessionaire concessionaire;
     private List<Client> listClients;
     private List<Sale> listSales;
+    private List<Document> listDocument;
 
     public Seller() {
 
@@ -24,6 +25,7 @@ public class Seller {
         this.concessionaire = concessionaire;
         this.listClients = new ArrayList<>();
         this.listSales = new ArrayList<>();
+        this.listDocument = new ArrayList<>();
     }
 
     @Override
@@ -32,7 +34,6 @@ public class Seller {
                "name='" + name + '\'' +
                ", lastName='" + lastName + '\'' +
                ", NIF='" + NIF + '\'' +
-               ", address='" + address + '\'' +
                '}';
     }
 
@@ -92,5 +93,14 @@ public class Seller {
     public void setConcessionaire(Concessionaire concessionaire) {
         this.concessionaire = concessionaire;
     }
+
+    public List<Document> getListDocument() {
+        return listDocument;
+    }
+
+    public void setListDocument(List<Document> listDocument) {
+        this.listDocument = listDocument;
+    }
+    
 
 }
