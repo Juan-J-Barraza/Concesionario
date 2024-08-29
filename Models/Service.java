@@ -1,4 +1,4 @@
-package Class;
+package Models;
 
 public class Service {
     private String name;
@@ -18,7 +18,7 @@ public class Service {
     @Override
     public String toString() {
         return "Service{" +
-                "name='" + name + '\'' +
+                "name=" + name + '\'' +
                 '}';
     }
 

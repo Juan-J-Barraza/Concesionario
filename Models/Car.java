@@ -1,4 +1,4 @@
-package Class;
+package Models;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -13,6 +13,7 @@ public class Car {
     private String models;
     private String status;
     private String feactures;
+    private Concessionaire concessionaire;
     private List<Equipment> listEquipmets;
     private List<ExtraEquipment> listAvailableExtras;
 
@@ -21,7 +22,7 @@ public class Car {
     }
 
     public Car(String frameNumber, Float price, String technicalData, String power, String brand, String models,
-            String status, String feactures) {
+            String status, String feactures, Concessionaire concessionaire) {
         this.frameNumber = frameNumber;
         this.price = price;
         this.technicalData = technicalData;
@@ -30,12 +31,13 @@ public class Car {
         this.models = models;
         this.status = status;
         this.feactures = feactures;
+        this.concessionaire = concessionaire;
         this.listEquipmets = new ArrayList<>();
         this.listAvailableExtras = new ArrayList<>();
     }
 
     public Car(String frameNumber, Float price, Float discount, String technicalData, String power, String brand,
-            String models, String status, String feactures) {
+            String models, String status, String feactures, Concessionaire concessionaire) {
         this.frameNumber = frameNumber;
         this.price = price;
         this.discount = discount;
@@ -45,6 +47,7 @@ public class Car {
         this.models = models;
         this.status = status;
         this.feactures = feactures;
+        this.concessionaire = concessionaire;
         this.listEquipmets = new ArrayList<>();
     }
 
@@ -52,13 +55,13 @@ public class Car {
     public String toString() {
         return "Car{" +
                 "model='" + models + '\'' +
-                ", price=" + price +
+                ", price='" + price +
                 ", brand='" + brand + '\'' +
                 ", status='" + status + '\'' +
                 ", power='" + power + '\'' +
                 ", feactures='" + feactures + '\'' +
-                ", listEquipmets='" + listEquipmets + '\'' +
-                ", listAvailableExtras='" + listAvailableExtras + '\'' +
+                ", listEquipmets=" + listEquipmets +
+                ", listAvailableExtras=" + listAvailableExtras +
                 '}';
     }
 
@@ -133,6 +136,7 @@ public class Car {
     public void setFeactures(String feactures) {
         this.feactures = feactures;
     }
+    
 
     public List<Equipment> getListEquipmets() {
         return listEquipmets;
@@ -148,6 +152,14 @@ public class Car {
 
     public void setListAvailableExtras(List<ExtraEquipment> listAvailableExtras) {
         this.listAvailableExtras = listAvailableExtras;
+    }
+
+    public Concessionaire getConcessionaire() {
+        return concessionaire;
+    }
+
+    public void setConcessionaire(Concessionaire concessionaire) {
+        this.concessionaire = concessionaire;
     }
 
 }

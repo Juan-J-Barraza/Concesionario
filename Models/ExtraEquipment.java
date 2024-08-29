@@ -1,4 +1,4 @@
-package Class;
+package Models;
 
 public class ExtraEquipment {
     private String name;

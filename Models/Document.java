@@ -1,14 +1,11 @@
-package Class;
+package Models;
 
-import java.util.List;
 import java.util.Date;
-import java.util.ArrayList;
 
 public class Document {
     private String payMethod;
     private Date date;
     private Client client;
-    private List<ExtraEquipment> listExtraEquipments;
     private Car car;
     private Seller seller;
 
@@ -22,7 +19,6 @@ public class Document {
         this.client = client;
         this.car = car;
         this.seller = seller;
-        this.listExtraEquipments = new ArrayList<>();
     }
 
     @Override
@@ -30,10 +26,9 @@ public class Document {
         return "Document{" +
                 "payMeethod='" + payMethod + '\'' +
                 ", date='" + date + '\'' +
-                ", client='" + client + '\'' +
-                ", car='" + car + '\'' +
-                ", seller='" + seller + '\'' +
-                ", listExtraEquipment='" + listExtraEquipments + '\'' +
+                ", client=" + client +
+                ", car=" + car + 
+                ", seller=" + seller +
                 '}';
     }
 
@@ -63,13 +58,6 @@ public class Document {
         this.client = client;
     }
 
-    public List<ExtraEquipment> getListExtraEquipments() {
-        return listExtraEquipments;
-    }
-
-    public void setListExtraEquipments(List<ExtraEquipment> listExtraEquipments) {
-        this.listExtraEquipments = listExtraEquipments;
-    }
 
     public Car getCar() {
         return car;

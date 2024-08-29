@@ -1,4 +1,4 @@
-package Class;
+package Models;
 
 public class Sale {
     private String registration;
@@ -20,7 +20,7 @@ public class Sale {
         return "Sale{" +
                 "Registration='" + registration + '\'' +
                 ", originCar='" + originCar + '\'' +
-                ", document='" + document + '\'' +
+                ", document=" + document + '\'' +
                 '}';
     }
 

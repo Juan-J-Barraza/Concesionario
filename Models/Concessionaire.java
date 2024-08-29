@@ -1,4 +1,4 @@
-package Class;
+package Models;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -8,6 +8,7 @@ public class Concessionaire {
     private String NIT;
     private List<Service> listServices;
     private List<Seller> listSellers;
+    private List<Car> listCars;
 
     public Concessionaire() {
 
@@ -18,7 +19,10 @@ public class Concessionaire {
         this.NIT = NIT;
         this.listServices = new ArrayList<>();
         this.listSellers = new ArrayList<>();
+        this.listCars = new ArrayList<>();
     }
+
+    
 
     public String getName() {
         return name;
@@ -51,5 +55,14 @@ public class Concessionaire {
     public void setListSellers(List<Seller> listSellers) {
         this.listSellers = listSellers;
     }
+
+    public List<Car> getListCars() {
+        return listCars;
+    }
+
+    public void setListCars(List<Car> listCars) {
+        this.listCars = listCars;
+    }
+    
 
 }

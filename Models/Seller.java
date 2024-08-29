@@ -1,4 +1,4 @@
-package Class;
+package Models;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -8,6 +8,7 @@ public class Seller {
     private String lastName;
     private String NIF;
     private String address;
+    private Concessionaire concessionaire;
     private List<Client> listClients;
     private List<Sale> listSales;
 
@@ -15,13 +16,24 @@ public class Seller {
 
     }
 
-    public Seller(String name, String lastName, String NIF, String address) {
+    public Seller(String name, String lastName, String NIF, String address, Concessionaire concessionaire) {
         this.name = name;
         this.lastName = lastName;
         this.NIF = NIF;
         this.address = address;
+        this.concessionaire = concessionaire;
         this.listClients = new ArrayList<>();
         this.listSales = new ArrayList<>();
+    }
+
+    @Override
+    public String toString() {
+        return "Seller{" +
+               "name='" + name + '\'' +
+               ", lastName='" + lastName + '\'' +
+               ", NIF='" + NIF + '\'' +
+               ", address='" + address + '\'' +
+               '}';
     }
 
     public String getName() {
@@ -56,6 +68,7 @@ public class Seller {
         this.address = address;
     }
 
+
     public List<Client> getListClients() {
         return listClients;
     }
@@ -70,6 +83,14 @@ public class Seller {
 
     public void setListSales(List<Sale> listSales) {
         this.listSales = listSales;
+    }
+
+    public Concessionaire getConcessionaire() {
+        return concessionaire;
+    }
+
+    public void setConcessionaire(Concessionaire concessionaire) {
+        this.concessionaire = concessionaire;
     }
 
 }
